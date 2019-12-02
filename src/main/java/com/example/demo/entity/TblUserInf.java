@@ -10,6 +10,7 @@ import lombok.Data;
  * @Modified By:
  */
 
+@Data
 public class TblUserInf{
     private long id;
     private String name;
