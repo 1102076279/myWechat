@@ -1,6 +1,25 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /demo
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/myWechat?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/mywechat?useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initialSize: 5
+      minIdle: 5
+      maxActive: 20
+      maxWait: 60000
+        # 配置多久进行一次检测，检测需要关闭的空闲连接 单位毫秒
+      timeBetweenEvictionRunsMillis: 60000
+      validationQuery: SELECT 1 FROM dual
+
+
+mybatis:
+  type-aliases-package: com.example.demo.entiy
+  mapper-locations: classpath:mappers/*.xml
+
