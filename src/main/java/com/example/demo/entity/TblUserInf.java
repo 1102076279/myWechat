@@ -1,8 +1,6 @@
 package com.example.demo.entity;
 
 
-import lombok.Data;
-
 /**
  * @author liwenjie
  * @Description:
@@ -10,7 +8,6 @@ import lombok.Data;
  * @Modified By:
  */
 
-@Data
 public class TblUserInf{
     private long id;
     private String name;

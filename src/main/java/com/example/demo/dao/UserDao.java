@@ -2,7 +2,6 @@ package com.example.demo.dao;
 
 import com.example.demo.entity.TblUserInf;
 import org.apache.ibatis.annotations.Select;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -12,7 +11,6 @@ import org.springframework.stereotype.Repository;
  * @Modified By:
  */
 @Repository
-@Component
 public interface UserDao {
 
     @Select("select * from tbl_user_inf where id=#{id}")
